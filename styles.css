@@ -75,7 +75,7 @@ input, textarea, button {
 
 #frase {
   background-color: #f4f4f4;  /* gris clarito */
-  color: #003366;             /* azul que combina con tu header */
+  color: #000000;             /* azul que combina con tu header */
   text-align: center;
   padding: 3em 1em;
 }
