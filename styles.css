@@ -73,4 +73,16 @@ input, textarea, button {
   font-size: 1.5em;
 }
 
+#frase {
+  background-color: #f4f4f4;  /* gris clarito */
+  color: #003366;             /* azul que combina con tu header */
+  text-align: center;
+  padding: 3em 1em;
+}
+
+#frase h2 {
+  font-size: 1em;
+  font-style: normal;
+  margin: 0;
+}
 
