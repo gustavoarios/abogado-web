@@ -940,3 +940,22 @@ footer {
     box-sizing: border-box;
   }
 }
+
+@media (max-width: 900px) {
+  #sobre-nosotros .contenido {
+    flex-direction: column;
+    gap: 1em;
+    padding: 0 1em;
+  }
+
+  #sobre-nosotros .titulo {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    white-space: normal;
+  }
+
+  #sobre-nosotros .textos {
+    font-size: 1em;
+    gap: 0.7em;
+  }
+}
