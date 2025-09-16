@@ -106,7 +106,7 @@ nav a:hover {
   text-decoration: none;
   font-family: 'Raleway', Arial, sans-serif;
   font-weight: 600;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
   transition: background 0.2s;
   z-index: 1100;
 }
@@ -129,6 +129,7 @@ nav a:hover {
     padding: 0.4em 0.7em;
     font-size: 0.95em;
   }
+
   .whatsapp-btn .whatsapp-text {
     display: none;
   }
@@ -238,7 +239,8 @@ button {
   /* alinea al inicio verticalmente */
   gap: 2em;
   /* espacio entre título y párrafo */
-  flex-direction: column; /* <-- Cambia esto para apilar verticalmente */
+  flex-direction: column;
+  /* <-- Cambia esto para apilar verticalmente */
 
 }
 
@@ -277,53 +279,46 @@ button {
 
 /* Nuestro Equipo */
 #equipo {
-  padding: 3em 2em;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
+  padding: 2em 0 2em 2em; /* igual que sobre-nosotros: padding-left: 2em */
   background-color: #D2D2D2;
-  /* gris oscuro */
 }
 
-#equipo .titulo-seccion {
+#equipo .contenido {
+  display: flex;
+  align-items: flex-start;
+  /* alinea al inicio verticalmente */
+  gap: 2em;
+  /* espacio entre título y párrafo */
+  flex-direction: column;
+  /* <-- Cambia esto para apilar verticalmente */
+
+}
+
+#equipo .titulo {
   flex: 0 0 auto;
-  /* que el ancho se ajuste al contenido */
   white-space: nowrap;
-  /* evita que el texto se rompa en varias líneas */
   font-family: 'Raleway', sans-serif;
   font-size: 2em;
   color: #19314B;
   margin: 0;
 }
-
 #equipo .textos {
   flex: 1;
-  /* ocupa todo el espacio restante */
   display: flex;
   flex-direction: column;
-  /* los párrafos se apilan verticalmente */
   gap: 1em;
-  /* espacio entre párrafos */
   font-size: 1.3em;
 }
-
-#equipo .descripcion-equipo {
+#equipo .descripcion {
   margin: 0;
   margin-bottom: 0.5em;
-  /* espacio entre párrafos */
   font-family: Arial, sans-serif;
   font-size: 1em;
   line-height: 1.6;
   color: #333;
 }
 
-#equipo .contenido-equipo {
-  display: flex;
-  align-items: flex-start;
-  /* alinea al inicio verticalmente */
-  gap: 2em;
-  /* espacio entre título y párrafo */
-}
+
 
 /* Socio fundador */
 #equipo .socio-fundador {
@@ -333,7 +328,7 @@ button {
   /* espacio entre imagen y texto */
   margin-top: 1.5em;
   /* separa del párrafo superior */
-  margin-left: 17em;
+  
   /* corre el bloque ligeramente a la derecha */
 }
 
@@ -411,15 +406,12 @@ button {
 
 /* Contenedor general de abogados */
 #equipo .abogados {
-  display: flex;
-  flex-direction: column;
-  /* organiza filas verticalmente */
-  gap: 1.5em;
-  /* espacio entre filas */
-  margin-top: 2em;
-  margin-left: 17em;
-  /* corre todo el bloque de abogados a la derecha */
-
+  #equipo .abogados {
+    margin-left: 0;
+    max-width: 1100px;
+    width: 100%;
+    margin: 2em auto 0 auto;
+  }
 }
 
 /* Fila de abogados */
@@ -429,6 +421,7 @@ button {
   /* dos abogados en extremos */
   gap: 2em;
   /* espacio entre abogados */
+  margin-bottom: 2.5em;
 }
 
 /* Abogado individual */
@@ -854,7 +847,7 @@ button {
   /*ESTO ES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
   min-height: 500px;
   /* ajustá la altura deseada */
-  
+
 }
 
 #contacto form input {
@@ -917,6 +910,7 @@ footer {
 }
 
 @media (max-width: 768px) {
+
   #contacto .contacto-lado-a-lado,
   #contacto .textos,
   .servicios-grid {
@@ -959,5 +953,37 @@ footer {
   #sobre-nosotros .textos {
     font-size: 1em;
     gap: 0.7em;
+  }
+}
+
+@media (max-width: 900px) {
+  #equipo .contenido-equipo {
+    max-width: 100%;
+    padding: 0 1em;
+    gap: 1em;
+  }
+
+  #equipo .textos {
+    font-size: 1em;
+  }
+
+  #equipo .descripcion-equipo {
+    max-width: 100%;
+  }
+
+  #equipo .abogados {
+    max-width: 100%;
+    margin-left: 0;
+    padding: 0 1em;
+  }
+
+  #equipo .abogados-fila {
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  #equipo .abogado img {
+    width: 100%;
+    max-width: 300px;
   }
 }
