@@ -24,17 +24,20 @@
       <a href="#!" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
         Inicio
       </a>
-
       <a href="#sobre-nosotros">Sobre nosotros</a>
       <a href="#equipo">Nuestro Equipo</a>
       <a href="#servicios">Servicios</a>
       <a href="#contacto">Contacto</a>
     </nav>
+    <a href="https://api.whatsapp.com/send/?phone=12345678" class="whatsapp-btn" target="_blank" title="Envíanos un Whatsapp">
+    <img src="img/whatsapp.png" alt="WhatsApp" style="height:32px;width:32px;vertical-align:middle;">
+    <span class="whatsapp-text">Envíanos un Whatsapp</span>
+  </a>
   </header>
 
   <!-- Sección principal -->
   <section id="hero">
-    <h2>Asesoramiento legal de confianza</h2>
+    <h2>Estudio Jurídico Pérez & Asociados</h2>
     <p>Más de 15 años de experiencia en derecho laboral y civil.</p>
   </section>
 
@@ -219,20 +222,30 @@
   </section>
   <!-- 👈 cierre de sección servicios -->
 
+  <!-- Sección contacto -->
   <section id="contacto">
     <div class="contenido">
       <h2 class="titulo">Contacto</h2>
+
+      <!-- Bloque de textos centrados -->
       <div class="textos">
-        <p class="descripcion">
-          Haga su consulta. <br>
+        <p class="descripcion-principal">Haga su consulta</p>
+        <p class="descripcion-secundaria">
           Le responderemos enseguida. <br>
-          Tenemos un equipo de especialistas preparados para asesorarlo.
+          Nuestro equipo de especialistas está disponible para resolver sus consultas con rapidez y profesionalismo.
+          <br>
+          Nos aseguramos de brindarle asesoramiento claro y personalizado, para que se sienta acompañado en cada paso.
         </p>
+      </div>
+
+      <!-- Bloque de datos + formulario lado a lado -->
+      <div class="contacto-lado-a-lado">
         <div class="datos-contacto">
           <p><strong>Teléfono:</strong> +54 11 1234-5678</p>
           <p><strong>Email:</strong> contacto@estudiojuridico.com</p>
           <p><strong>Dirección:</strong> Av. Corrientes 1234, CABA, Argentina</p>
         </div>
+
         <form id="form-contacto">
           <input type="text" placeholder="Tu nombre" required>
           <input type="email" placeholder="Tu email" required>
@@ -242,8 +255,17 @@
       </div>
     </div>
   </section>
+
   <!-- 👈 cierre de sección contacto -->
 
+
+
+
+  <footer
+    style="background:#19314B; color:#fff; text-align:center; padding:1.5em 0; font-family:'Raleway', Arial, sans-serif; font-size:1em;">
+    © Copyright 2025 - Estudio Jurídico Pérez & Asociados® | Todos los Derechos Reservados<br>
+    Realizado por Gustavo Rios.
+  </footer>
 
   <script src="script.js"></script>
 </body>

@@ -2,21 +2,27 @@
 /* Para pantallas pequeñas (celulares) */
 @media (max-width: 768px) {
   .servicios-grid {
-    grid-template-columns: 1fr; /* una columna */
-    padding-left: 1em;          /* ajusta el padding */
-    max-width: 90%;             /* ancho relativo */
+    grid-template-columns: 1fr;
+    /* una columna */
+    padding-left: 1em;
+    /* ajusta el padding */
+    max-width: 90%;
+    /* ancho relativo */
   }
 
   #servicios .descripcion {
-    padding-left: 0;            /* quita desplazamiento lateral */
-    font-size: 0.95em;          /* texto más pequeño */
+    padding-left: 0;
+    /* quita desplazamiento lateral */
+    font-size: 0.95em;
+    /* texto más pequeño */
   }
 }
 
 /* Para tablets */
 @media (max-width: 1024px) {
   .servicios-grid {
-    grid-template-columns: repeat(2, 1fr); /* dos columnas */
+    grid-template-columns: repeat(2, 1fr);
+    /* dos columnas */
     gap: 1em;
     padding-left: 2em;
   }
@@ -30,6 +36,7 @@ body {
   padding: 0;
 
 }
+
 /* para que el scroll sea suave */
 html {
   scroll-behavior: smooth;
@@ -38,34 +45,43 @@ html {
 
 /* Header */
 header {
-    background: #d2d2d2;
-    padding: 1em;
-    display: flex;
-    align-items: center;
-    position: fixed;        /* hace que quede fijo */
-    top: 0;                 /* siempre arriba */
-    left: 0;                /* alinea al borde izquierdo */
-    width: 100%;            /* que ocupe todo el ancho */
-    z-index: 1000;          /* para que quede por encima del contenido */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5); /* sombra sutil */
+  background: #d2d2d2;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  /* hace que quede fijo */
+  top: 0;
+  /* siempre arriba */
+  left: 0;
+  /* alinea al borde izquierdo */
+  width: 100%;
+  /* que ocupe todo el ancho */
+  z-index: 1000;
+  /* para que quede por encima del contenido */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  /* sombra sutil */
 
 }
 
 header .logo {
   height: 60px;
   width: auto;
-  margin-left: 40px; /* separa el logo del borde izquierdo */
+  margin-left: 40px;
+  /* separa el logo del borde izquierdo */
 }
 
 nav {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%); /* centra horizontalmente */
+  transform: translateX(-50%);
+  /* centra horizontalmente */
 }
 
 nav a {
   font-family: 'Raleway', sans-serif;
-  font-weight: 400; /* normal */
+  font-weight: 400;
+  /* normal */
   font-size: 18px;
   color: #595959;
   margin: 0 1em;
@@ -76,14 +92,60 @@ nav a:hover {
   color: #000;
 }
 
+.whatsapp-btn {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  background: #25D366;
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 25px;
+  text-decoration: none;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transition: background 0.2s;
+  z-index: 1100;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe57;
+}
+
+.whatsapp-btn img {
+  margin-right: 0.5em;
+}
+
+.whatsapp-text {
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-btn {
+    right: 10px;
+    padding: 0.4em 0.7em;
+    font-size: 0.95em;
+  }
+  .whatsapp-btn .whatsapp-text {
+    display: none;
+  }
+}
+
 
 /* Secciones */
 section {
   padding: 2em;
-  scroll-margin-top: 80px; /* igual a la altura del header fijo */
-  background: #fff;        /* obligatorio para que se vea la sombra */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* sombra suave debajo */
-  border-radius: 5px;      /* opcional, bordes redondeados */
+  scroll-margin-top: 80px;
+  /* igual a la altura del header fijo */
+  background: #fff;
+  /* obligatorio para que se vea la sombra */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* sombra suave debajo */
+  border-radius: 5px;
+  /* opcional, bordes redondeados */
 
 }
 
@@ -94,7 +156,9 @@ form {
   max-width: 400px;
 }
 
-input, textarea, button {
+input,
+textarea,
+button {
   margin: 0.5em 0;
   padding: 0.5em;
 }
@@ -112,7 +176,8 @@ input, textarea, button {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 100px; /* ajusta según la altura real del header */
+  padding-top: 100px;
+  /* ajusta según la altura real del header */
 
 }
 
@@ -124,13 +189,14 @@ input, textarea, button {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
-#hero > * {
+#hero>* {
   position: relative;
-  z-index: 2; /* para que el texto quede arriba del overlay */
+  z-index: 2;
+  /* para que el texto quede arriba del overlay */
 }
 
 /* agrandar h2 y p del hero */
@@ -145,7 +211,8 @@ input, textarea, button {
 
 /* Frase destacada */
 #frase {
-  background-color: #d2d2d2;  /* gris clarito */
+  background-color: #d2d2d2;
+  /* gris clarito */
   color: #000000;
   text-align: center;
   padding: 3em 1em;
@@ -156,9 +223,10 @@ input, textarea, button {
   font-style: normal;
   font-family: 'Raleway', sans-serif;
   margin: 0;
-  font-weight: 400; /* normal */
-  
-  
+  font-weight: 400;
+  /* normal */
+
+
 
 }
 
@@ -166,13 +234,17 @@ input, textarea, button {
 
 #sobre-nosotros .contenido {
   display: flex;
-  align-items: flex-start; /* alinea al inicio verticalmente */
-  gap: 2em;                /* espacio entre título y párrafo */
+  align-items: flex-start;
+  /* alinea al inicio verticalmente */
+  gap: 2em;
+  /* espacio entre título y párrafo */
 }
 
 #sobre-nosotros .titulo {
-  flex: 0 0 auto;        /* que el ancho se ajuste al contenido */
-  white-space: nowrap;   /* evita que el texto se rompa en varias líneas */
+  flex: 0 0 auto;
+  /* que el ancho se ajuste al contenido */
+  white-space: nowrap;
+  /* evita que el texto se rompa en varias líneas */
   font-family: 'Raleway', sans-serif;
   font-size: 2em;
   color: #19314B;
@@ -181,16 +253,20 @@ input, textarea, button {
 
 
 #sobre-nosotros .textos {
-  flex: 1;                 /* ocupa todo el espacio restante */
+  flex: 1;
+  /* ocupa todo el espacio restante */
   display: flex;
-  flex-direction: column;  /* los párrafos se apilan verticalmente */
-  gap: 1em;                /* espacio entre párrafos */
+  flex-direction: column;
+  /* los párrafos se apilan verticalmente */
+  gap: 1em;
+  /* espacio entre párrafos */
   font-size: 1.3em;
 }
 
 #sobre-nosotros .descripcion {
   margin: 0;
-  margin-bottom: 0.5em; /* espacio entre párrafos */
+  margin-bottom: 0.5em;
+  /* espacio entre párrafos */
   font-family: Arial, sans-serif;
   font-size: 1em;
   line-height: 1.6;
@@ -203,12 +279,15 @@ input, textarea, button {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  background-color: #D2D2D2; /* gris oscuro */
+  background-color: #D2D2D2;
+  /* gris oscuro */
 }
 
 #equipo .titulo-seccion {
-  flex: 0 0 auto;        /* que el ancho se ajuste al contenido */
-  white-space: nowrap;   /* evita que el texto se rompa en varias líneas */
+  flex: 0 0 auto;
+  /* que el ancho se ajuste al contenido */
+  white-space: nowrap;
+  /* evita que el texto se rompa en varias líneas */
   font-family: 'Raleway', sans-serif;
   font-size: 2em;
   color: #19314B;
@@ -216,16 +295,20 @@ input, textarea, button {
 }
 
 #equipo .textos {
-  flex: 1;                 /* ocupa todo el espacio restante */
+  flex: 1;
+  /* ocupa todo el espacio restante */
   display: flex;
-  flex-direction: column;  /* los párrafos se apilan verticalmente */
-  gap: 1em;                /* espacio entre párrafos */
+  flex-direction: column;
+  /* los párrafos se apilan verticalmente */
+  gap: 1em;
+  /* espacio entre párrafos */
   font-size: 1.3em;
 }
 
 #equipo .descripcion-equipo {
   margin: 0;
-  margin-bottom: 0.5em; /* espacio entre párrafos */
+  margin-bottom: 0.5em;
+  /* espacio entre párrafos */
   font-family: Arial, sans-serif;
   font-size: 1em;
   line-height: 1.6;
@@ -234,21 +317,27 @@ input, textarea, button {
 
 #equipo .contenido-equipo {
   display: flex;
-  align-items: flex-start; /* alinea al inicio verticalmente */
-  gap: 2em;                /* espacio entre título y párrafo */
+  align-items: flex-start;
+  /* alinea al inicio verticalmente */
+  gap: 2em;
+  /* espacio entre título y párrafo */
 }
 
 /* Socio fundador */
 #equipo .socio-fundador {
   display: flex;
   align-items: flex-start;
-  gap: 1.5em;             /* espacio entre imagen y texto */
-  margin-top: 1.5em;      /* separa del párrafo superior */
-  margin-left: 17em;        /* corre el bloque ligeramente a la derecha */
+  gap: 1.5em;
+  /* espacio entre imagen y texto */
+  margin-top: 1.5em;
+  /* separa del párrafo superior */
+  margin-left: 17em;
+  /* corre el bloque ligeramente a la derecha */
 }
 
 #equipo .socio-fundador img {
-  width: 300px;            /* ancho aumentado */
+  width: 300px;
+  /* ancho aumentado */
   height: auto;
   border-radius: 8px;
   object-fit: cover;
@@ -259,7 +348,8 @@ input, textarea, button {
   border: none;
   border-bottom: 2px solid #000;
   width: 50%;
-  margin: 1.5em auto -3em auto; /* top, right, bottom, left */
+  margin: 1.5em auto -3em auto;
+  /* top, right, bottom, left */
   padding: 0;
 }
 
@@ -267,8 +357,10 @@ input, textarea, button {
 
 .subtitulo-equipo {
   text-align: center;
-  margin-top: 0.5em;   /* un poquito de espacio desde la línea */
-  margin-bottom: 2em;  /* espacio debajo del título, opcional */
+  margin-top: 0.5em;
+  /* un poquito de espacio desde la línea */
+  margin-bottom: 2em;
+  /* espacio debajo del título, opcional */
 }
 
 
@@ -318,18 +410,23 @@ input, textarea, button {
 /* Contenedor general de abogados */
 #equipo .abogados {
   display: flex;
-  flex-direction: column;  /* organiza filas verticalmente */
-  gap: 1.5em;             /* espacio entre filas */
+  flex-direction: column;
+  /* organiza filas verticalmente */
+  gap: 1.5em;
+  /* espacio entre filas */
   margin-top: 2em;
-  margin-left: 17em;       /* corre todo el bloque de abogados a la derecha */
+  margin-left: 17em;
+  /* corre todo el bloque de abogados a la derecha */
 
 }
 
 /* Fila de abogados */
 #equipo .abogados-fila {
   display: flex;
-  justify-content: space-between; /* dos abogados en extremos */
-  gap: 2em;                       /* espacio entre abogados */
+  justify-content: space-between;
+  /* dos abogados en extremos */
+  gap: 2em;
+  /* espacio entre abogados */
 }
 
 /* Abogado individual */
@@ -337,7 +434,8 @@ input, textarea, button {
   display: flex;
   align-items: flex-start;
   gap: 1em;
-  flex: 1;                        /* ocupa el mismo espacio cada abogado */
+  flex: 1;
+  /* ocupa el mismo espacio cada abogado */
 }
 
 #equipo .abogado img {
@@ -385,8 +483,10 @@ input, textarea, button {
 
 .servicios-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
-  gap: 1.5em; /* espacio entre servicios */
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 columnas iguales */
+  gap: 1.5em;
+  /* espacio entre servicios */
   margin-top: 1em;
 }
 
@@ -395,9 +495,10 @@ input, textarea, button {
   padding: 1em;
   text-align: center;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
-  height: 200px;     /* altura fija */
+  height: 200px;
+  /* altura fija */
 
 }
 
@@ -409,13 +510,17 @@ input, textarea, button {
 
 #servicios .contenido {
   display: flex;
-  align-items: flex-start; /* alinea al inicio verticalmente */
-  gap: 2em;                /* espacio entre título y párrafo */
+  align-items: flex-start;
+  /* alinea al inicio verticalmente */
+  gap: 2em;
+  /* espacio entre título y párrafo */
 }
 
 #servicios .titulo {
-  flex: 0 0 auto;        /* que el ancho se ajuste al contenido */
-  white-space: nowrap;   /* evita que el texto se rompa en varias líneas */
+  flex: 0 0 auto;
+  /* que el ancho se ajuste al contenido */
+  white-space: nowrap;
+  /* evita que el texto se rompa en varias líneas */
   font-family: 'Raleway', sans-serif;
   font-size: 2em;
   color: #19314B;
@@ -424,21 +529,26 @@ input, textarea, button {
 
 
 #servicios .textos {
-  flex: 1;                 /* ocupa todo el espacio restante */
+  flex: 1;
+  /* ocupa todo el espacio restante */
   display: flex;
-  flex-direction: column;  /* los párrafos se apilan verticalmente */
-  gap: 1em;                /* espacio entre párrafos */
+  flex-direction: column;
+  /* los párrafos se apilan verticalmente */
+  gap: 1em;
+  /* espacio entre párrafos */
   font-size: 1.3em;
 }
 
 #servicios .descripcion {
   margin: 0;
-  margin-bottom: 0.5em; /* espacio entre párrafos */
+  margin-bottom: 0.5em;
+  /* espacio entre párrafos */
   font-family: Arial, sans-serif;
   font-size: 1em;
   line-height: 1.6;
   color: #333;
-  padding-left: 4.8em; /* mueve todo el bloque de texto hacia la derecha */
+  padding-left: 4.8em;
+  /* mueve todo el bloque de texto hacia la derecha */
 
 }
 
@@ -447,32 +557,38 @@ input, textarea, button {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5em;
-  max-width: 1500px;        /* igual que el ancho del párrafo */
-  margin: 0 auto;          /* centrado horizontal */
-  padding-left: 17em; /* mueve todo el bloque de texto hacia la derecha */ /*ESTO ES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+  max-width: 1500px;
+  /* igual que el ancho del párrafo */
+  margin: 0 auto;
+  /* centrado horizontal */
+  padding-left: 17em;
+  /* mueve todo el bloque de texto hacia la derecha */
+  /*ESTO ES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
   margin-top: 1.5em;
 
 }
 
 /* Cada tarjeta */
 .servicio {
-  background: #D2D2D2;       /* color de fondo */
+  background: #D2D2D2;
+  /* color de fondo */
   padding: 1.5em;
   text-align: center;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* Hover efecto */
 .servicio:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Título de cada tarjeta */
 .servicio h3 {
-  color: #19314B;       /* azul para títulos */
+  color: #19314B;
+  /* azul para títulos */
   font-family: 'Raleway', sans-serif;
   font-size: 1.3em;
   margin-bottom: 0.5em;
@@ -480,7 +596,8 @@ input, textarea, button {
 
 /* Descripción de cada tarjeta */
 .servicio p {
-  color: #333;          /* gris oscuro para el texto */
+  color: #333;
+  /* gris oscuro para el texto */
   font-family: Arial, sans-serif;
   font-size: 1em;
   line-height: 1.6;
@@ -490,23 +607,27 @@ input, textarea, button {
 /*agregamos esto para que tengan la imagen*/
 /* Cada tarjeta con overlay de imagen */
 .servicio {
-  position: relative;   /* necesario para el overlay */
-  overflow: hidden;     /* evita que la imagen se salga */
+  position: relative;
+  /* necesario para el overlay */
+  overflow: hidden;
+  /* evita que la imagen se salga */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centra verticalmente el contenido */
-  align-items: center;     /* centra horizontalmente */
+  justify-content: center;
+  /* centra verticalmente el contenido */
+  align-items: center;
+  /* centra horizontalmente */
   border-radius: 8px;
   padding: 1.5em;
   background: #D2D2D2;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* Hover efecto */
 .servicio:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Pseudo-elemento ::before para la imagen de fondo */
@@ -519,9 +640,11 @@ input, textarea, button {
   height: 100%;
   background-size: cover;
   background-position: center;
-  opacity: 0.25;        /* transparencia para que se lea el texto */
+  opacity: 0.25;
+  /* transparencia para que se lea el texto */
   z-index: 0;
-  border-radius: 8px;   /* coincide con las esquinas de la tarjeta */
+  border-radius: 8px;
+  /* coincide con las esquinas de la tarjeta */
 }
 
 /* Aseguramos que el contenido quede sobre la imagen */
@@ -558,15 +681,33 @@ input, textarea, button {
 
 /* Contacto */
 
+#contacto {
+  background-color: #D2D2D2;
+  /* gris */
+  padding: 2em 1em 3em 1em;
+  /* padding-top más pequeño para acercar el bloque al título */
+  text-align: center;
+  /* centramos todos los textos */
+
+}
+
 #contacto .contenido {
   display: flex;
-  align-items: flex-start; /* alinea al inicio verticalmente */
-  gap: 2em;                /* espacio entre título y texto/formulario */
+  align-items: flex-start;
+  /* alinea al inicio verticalmente */
+  gap: 2em;
+  /* espacio entre título y párrafo */
+  flex-direction: column;
+  /* apila verticalmente: titulo > textos > contacto-lado-a-lado */
+
+
 }
 
 #contacto .titulo {
-  flex: 0 0 auto;        /* que el ancho se ajuste al contenido */
-  white-space: nowrap;   /* evita que el texto se rompa en varias líneas */
+  flex: 0 0 auto;
+  /* que el ancho se ajuste al contenido */
+  white-space: nowrap;
+  /* evita que el texto se rompa en varias líneas */
   font-family: 'Raleway', sans-serif;
   font-size: 2em;
   color: #19314B;
@@ -574,21 +715,61 @@ input, textarea, button {
 }
 
 #contacto .textos {
-  flex: 1;                 /* ocupa todo el espacio restante */
+  flex: 1;
+  /* ocupa todo el espacio restante */
   display: flex;
-  flex-direction: column;  /* los párrafos se apilan verticalmente */
-  gap: 1em;                /* espacio entre párrafos */
+  flex-direction: column;
+  /* los párrafos se apilan verticalmente */
+  gap: 1em;
+  /* espacio entre párrafos */
   font-size: 1.3em;
+  margin: 0;
+  /* quitar márgenes por defecto */
+  margin-top: -3em;
+  /* separa un poquito del titulo, ajustable */
+  align-items: center;
+  /* centrado horizontal */
+  padding-left: 17em;
+  /* mueve todo el bloque de texto hacia la derecha */
+  /*ESTO ES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+
+
 }
 
 #contacto .descripcion {
   margin: 0;
-  margin-bottom: 0.5em; /* espacio entre párrafos */
+  margin-bottom: 0.5em;
+  /* espacio entre párrafos */
   font-family: Arial, sans-serif;
   font-size: 1em;
   line-height: 1.6;
   color: #333;
-  padding-left: 4.8em; /* mueve todo el bloque de texto hacia la derecha */ /*ESTO ES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+  padding-left: 4.8em;
+  /* mueve todo el bloque de texto hacia la derecha */
+  /*ESTO ES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+}
+
+#contacto .descripcion-principal {
+  flex: 0 0 auto;
+  /* que el ancho se ajuste al contenido */
+  white-space: nowrap;
+  /* evita que el texto se rompa en varias líneas */
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5em;
+  color: #19314B;
+  margin: 0;
+}
+
+#contacto .descripcion-secundaria {
+  flex: 0 0 auto;
+  /* que el ancho se ajuste al contenido */
+  white-space: nowrap;
+  /* evita que el texto se rompa en varias líneas */
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+  color: #333;
+  margin: 0;
 }
 
 /* Datos de contacto a la izquierda */
@@ -635,11 +816,115 @@ input, textarea, button {
   }
 }
 
+/* Contenedor datos + formulario lado a lado */
+#contacto .contacto-lado-a-lado {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  margin-top: 2em;
+  /* separación del bloque de textos */
+  padding-left: 17em;
+  /* mueve todo el bloque de texto hacia la derecha */
+  /*ESTO ES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+}
+
+/* Datos a la izquierda */
+#contacto .datos-contacto {
+  flex: 3;
+  font-size: 1.3em;
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+  padding-left: 3em;
+  /* mueve todo el bloque de texto hacia la derecha */
+  /*ESTO ES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+}
+
+/* Formulario a la derecha */
+#contacto form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-left: 2.5em;
+  /* mueve todo el bloque de texto hacia la derecha */
+  /*ESTO ES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+  min-height: 500px;
+  /* ajustá la altura deseada */
+  
+}
+
+#contacto form input {
+  width: 300%;
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.95em;
+  font-family: 'Raleway', Arial, sans-serif;
+
+}
+
+#contacto form textarea {
+
+  min-height: 200px;
+  /* ajustá según quieras */
+  padding: 1em;
+  font-size: 0.95em;
+  /* mismo tamaño que antes */
+  width: 300%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Raleway', Arial, sans-serif;
 
 
 
+}
 
+#contacto form input::placeholder,
+#contacto form textarea::placeholder {
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 1em;
+  color: #595959;
+}
 
+#contacto form button {
+  background-color: #19314B;
+  color: #fff;
+  padding: 0.8em 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
+#contacto form button:hover {
+  background-color: #0f1f36;
+}
 
+/*Footer*/
+footer {
+  background: #19314B;
+  color: #fff;
+  text-align: center;
+  padding: 1.5em 0;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 1em;
+  letter-spacing: 0.02em;
+  border-top: 2px solid #14253a;
+  margin-top: 0em;
+}
 
+@media (max-width: 768px) {
+  footer {
+    font-size: 0.95em;
+    padding: 1em 0.5em;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #contacto .contacto-lado-a-lado {
+    flex-direction: column;
+    /* se apilan en móvil */
+  }
+}
