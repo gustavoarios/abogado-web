@@ -771,7 +771,7 @@ button {
   header {
     flex-direction: column;
     align-items: center;
-    padding: 2em 1em; /*aca cambie de 0.5 a 0.5 original*/
+    padding: 3em 1.5em; /*aca cambie de 0.5 a 0.5 original*/
     height: auto;
   }
 
