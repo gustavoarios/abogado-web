@@ -3,21 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
   <title>Estudio Jurídico - Dr. Pérez</title>
+  
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <!-- Encabezado -->
   <header>
-    <h1>Estudio Jurídico Dr. Pérez</h1>
+        <img src="img/logo.png" alt="Logo Estudio Jurídico" class="logo">
+    <!-- <h1>Estudio Jurídico Dr. Pérez</h1> -->
     <nav>
-      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#">Inicio</a>
+      <a href="#sobre-nosotros">Sobre nosotros</a>
+      <a href="#equipo">Nuestro Equipo</a>
       <a href="#servicios">Servicios</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </header>
-
-
 
   <!-- Sección principal -->
   <section id="hero">
@@ -30,11 +37,120 @@
 </section>
 
 
-  <!-- Sección sobre mí -->
-  <section id="sobre-mi">
-    <h2>Sobre mí</h2>
-    <p>Soy abogado matriculado especializado en derecho laboral, civil y comercial.</p>
-  </section>
+  <!-- Sección "Sobre nosotros" -->
+<section id="sobre-nosotros">
+  <div class="contenido">
+    <h2 class="titulo">Sobre Nosotros</h2>
+    <div class="textos">
+      <p class="descripcion">
+        En Estudio Jurídico Pérez & Asociados brindamos asesoramiento legal integral con más de <strong>10 años de experiencia</strong> en diversas áreas del derecho. Nuestro enfoque está centrado en el cliente: escuchamos cada caso, analizamos las opciones y acompañamos a nuestros clientes en cada paso, buscando soluciones claras, efectivas y personalizadas. Nos especializamos en <strong>Derecho Civil, Laboral, Comercial y de Familia</strong>, ofreciendo desde consultoría preventiva hasta representación judicial completa. Nuestra misión es combinar profesionalismo, ética y compromiso para proteger los derechos y los intereses de quienes confían en nosotros.
+      </p>
+      <p class="descripcion">
+        El socio fundador, <strong>Francisco Pérez</strong>, es graduado de la Universidad de Buenos Aires y cuenta con más de <strong>15 años de experiencia</strong> en litigios complejos y asesoramiento corporativo. Su visión profesional se centra en combinar conocimiento jurídico profundo con un trato cercano y humano, asegurando que cada cliente se sienta acompañado y respaldado en todo momento.
+      </p>
+      <p class="descripcion">
+        Nuestro equipo de abogados altamente calificados trabaja de manera colaborativa, priorizando la innovación y las soluciones personalizadas. Además de la práctica tradicional, <strong>ofrecemos servicios de consultoría preventiva, capacitaciones y talleres sobre derechos y obligaciones legales</strong>, ayudando a nuestros clientes a anticipar riesgos y tomar decisiones estratégicas con confianza.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Sección "Nuestro Equipo" -->
+<section id="equipo">
+  <div class="contenido-equipo">
+
+  <h2 class="titulo-seccion">Nuestro Equipo</h2>
+
+  <div class="textos">
+    <p class="descripcion-equipo">
+El estudio está conformado por abogados altamente calificados y comprometidos con la excelencia profesional. Cada miembro aporta su experiencia y especialización en distintas áreas del derecho, trabajando de manera colaborativa para ofrecer soluciones efectivas y personalizadas. Nos enfocamos en escuchar a nuestros clientes, entender sus necesidades y brindar un asesoramiento integral que combina conocimiento jurídico profundo con un trato cercano y humano.
+</p>
+  </div>
+  </div>
+
+<!-- Socio fundador -->
+<div class="socio-fundador">
+  <img src="img/francisco.png" alt="Socio fundador Francisco">
+  <div class="info">
+    <h3 class="nombre">Francisco Pérez</h3>
+    <h4 class="titulo-socio">Socio Fundador</h4>
+    <p class="descripcion">
+      Especializado en derecho laboral y civil, aporta más de 15 años de experiencia al estudio. Su enfoque combina un sólido conocimiento jurídico con una atención cercana y personalizada hacia cada cliente.
+    </p>
+  </div>
+</div> <!-- 👈 cierre de socio-fundador -->
+
+<hr class="linea-separadora">
+
+
+<!-- Título del bloque de abogados -->
+<h3 class="subtitulo-equipo">Forman parte de nuestro equipo</h3>
+
+<!-- Contenedor general de abogados -->
+<div class="abogados">
+  <!-- Fila 1 de abogados -->
+  <div class="abogados-fila">
+    <div class="abogado">
+      <img src="img/abogado1.png" alt="Abogado 1">
+      <div class="info">
+        <h3 class="nombre">Ana Gómez</h3>
+        <h4 class="titulo-abogado">Abogada Laboral</h4>
+        <p class="descripcion">
+          Especialista en derecho laboral con amplia experiencia en asesoramiento empresarial.
+        </p>
+      </div>
+    </div>
+    <div class="abogado">
+      <img src="img/abogado2.png" alt="Abogado 2">
+      <div class="info">
+        <h3 class="nombre">Carlos Ramírez</h3>
+        <h4 class="titulo-abogado">Abogado Civil</h4>
+        <p class="descripcion">
+          Experto en litigios civiles y contratos, brindando soluciones personalizadas a cada cliente.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Fila 2 de abogados -->
+  <div class="abogados-fila">
+    <div class="abogado">
+      <img src="img/abogado3.png" alt="Abogado 3">
+      <div class="info">
+        <h3 class="nombre">Laura Fernández</h3>
+        <h4 class="titulo-abogado">Abogada Penal</h4>
+        <p class="descripcion">
+          Defensora en causas penales con enfoque en garantizar el debido proceso y la justicia.
+        </p>
+      </div>
+    </div>
+    <div class="abogado">
+      <img src="img/abogado4.png" alt="Abogado 4">
+      <div class="info">
+        <h3 class="nombre">Miguel Torres</h3>
+        <h4 class="titulo-abogado">Abogado Comercial</h4>
+        <p class="descripcion">
+          Especialista en derecho comercial y societario, acompañando a empresas en su crecimiento.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+</div>
+
+</section>
+
+
+
+
+
 
   <!-- Sección servicios -->
   <section id="servicios">

@@ -1,26 +1,65 @@
+/* Estilos generales */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+
+}
+/* para que el scroll sea suave */
+html {
+  scroll-behavior: smooth;
 }
 
+
+/* Header */
 header {
-  background: #003366;
-  color: white;
-  padding: 1em;
-  text-align: center;
+    background: #d2d2d2;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    position: fixed;        /* hace que quede fijo */
+    top: 0;                 /* siempre arriba */
+    left: 0;                /* alinea al borde izquierdo */
+    width: 100%;            /* que ocupe todo el ancho */
+    z-index: 1000;          /* para que quede por encima del contenido */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5); /* sombra sutil */
+
+}
+
+header .logo {
+  height: 60px;
+  width: auto;
+  margin-left: 40px; /* separa el logo del borde izquierdo */
+}
+
+nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* centra horizontalmente */
 }
 
 nav a {
-  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400; /* normal */
+  font-size: 18px;
+  color: #595959;
   margin: 0 1em;
   text-decoration: none;
 }
 
-section {
-  padding: 2em;
+nav a:hover {
+  color: #000;
 }
 
+
+/* Secciones */
+section {
+  padding: 2em;
+  scroll-margin-top: 80px; /* igual a la altura del header fijo */
+
+}
+
+/* Formularios */
 form {
   display: flex;
   flex-direction: column;
@@ -32,6 +71,7 @@ input, textarea, button {
   padding: 0.5em;
 }
 
+/* Hero (imagen principal) */
 #hero {
   position: relative;
   background-image: url('img/facultad_uba_derecho.jpg');
@@ -44,6 +84,8 @@ input, textarea, button {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding-top: 100px; /* ajusta según la altura real del header */
+
 }
 
 /* overlay semitransparente */
@@ -54,7 +96,7 @@ input, textarea, button {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5); /* negro con 50% de opacidad */
+  background-color: rgba(0,0,0,0.5);
   z-index: 1;
 }
 
@@ -73,9 +115,10 @@ input, textarea, button {
   font-size: 1.5em;
 }
 
+/* Frase destacada */
 #frase {
-  background-color: #f4f4f4;  /* gris clarito */
-  color: #000000;             /* azul que combina con tu header */
+  background-color: #d2d2d2;  /* gris clarito */
+  color: #000000;
   text-align: center;
   padding: 3em 1em;
 }
@@ -83,6 +126,232 @@ input, textarea, button {
 #frase h2 {
   font-size: 1em;
   font-style: normal;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  font-weight: 400; /* normal */
+  
+  
+
+}
+
+/* Sobre Nosotros */
+
+#sobre-nosotros .contenido {
+  display: flex;
+  align-items: flex-start; /* alinea al inicio verticalmente */
+  gap: 2em;                /* espacio entre título y párrafo */
+}
+
+#sobre-nosotros .titulo {
+  flex: 0 0 auto;        /* que el ancho se ajuste al contenido */
+  white-space: nowrap;   /* evita que el texto se rompa en varias líneas */
+  font-family: 'Raleway', sans-serif;
+  font-size: 2em;
+  color: #19314B;
   margin: 0;
 }
+
+
+#sobre-nosotros .textos {
+  flex: 1;                 /* ocupa todo el espacio restante */
+  display: flex;
+  flex-direction: column;  /* los párrafos se apilan verticalmente */
+  gap: 1em;                /* espacio entre párrafos */
+  font-size: 1.3em;
+}
+
+#sobre-nosotros .descripcion {
+  margin: 0;
+  margin-bottom: 0.5em; /* espacio entre párrafos */
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Nuestro Equipo */
+#equipo {
+  padding: 3em 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: #D2D2D2; /* gris oscuro */
+}
+
+#equipo .titulo-seccion {
+  flex: 0 0 auto;        /* que el ancho se ajuste al contenido */
+  white-space: nowrap;   /* evita que el texto se rompa en varias líneas */
+  font-family: 'Raleway', sans-serif;
+  font-size: 2em;
+  color: #19314B;
+  margin: 0;
+}
+
+#equipo .textos {
+  flex: 1;                 /* ocupa todo el espacio restante */
+  display: flex;
+  flex-direction: column;  /* los párrafos se apilan verticalmente */
+  gap: 1em;                /* espacio entre párrafos */
+  font-size: 1.3em;
+}
+
+#equipo .descripcion-equipo {
+  margin: 0;
+  margin-bottom: 0.5em; /* espacio entre párrafos */
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.6;
+  color: #333;
+}
+
+#equipo .contenido-equipo {
+  display: flex;
+  align-items: flex-start; /* alinea al inicio verticalmente */
+  gap: 2em;                /* espacio entre título y párrafo */
+}
+
+/* Socio fundador */
+#equipo .socio-fundador {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5em;             /* espacio entre imagen y texto */
+  margin-top: 1.5em;      /* separa del párrafo superior */
+  margin-left: 17em;        /* corre el bloque ligeramente a la derecha */
+}
+
+#equipo .socio-fundador img {
+  width: 300px;            /* ancho aumentado */
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Línea que separa socio fundador y bloque de abogados */
+.linea-separadora {
+  border: none;
+  border-bottom: 2px solid #000;
+  width: 50%;
+  margin: 1.5em auto -3em auto; /* top, right, bottom, left */
+  padding: 0;
+}
+
+
+
+.subtitulo-equipo {
+  text-align: center;
+  margin-top: 0.5em;   /* un poquito de espacio desde la línea */
+  margin-bottom: 2em;  /* espacio debajo del título, opcional */
+}
+
+
+#equipo .socio-fundador .info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+#equipo .socio-fundador .info .nombre {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #19314B;
+  margin: 0;
+}
+
+#equipo .socio-fundador .info .titulo-socio {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #19314B;
+  margin: 0;
+}
+
+#equipo .socio-fundador .info .descripcion {
+  font-family: Arial, sans-serif;
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: #333;
+  margin: 0;
+}
+
+/* Título del bloque de abogados */
+#equipo .subtitulo-equipo {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: #19314B;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  text-align: center;
+
+}
+
+
+/* Contenedor general de abogados */
+#equipo .abogados {
+  display: flex;
+  flex-direction: column;  /* organiza filas verticalmente */
+  gap: 1.5em;             /* espacio entre filas */
+  margin-top: 2em;
+  margin-left: 17em;       /* corre todo el bloque de abogados a la derecha */
+
+}
+
+/* Fila de abogados */
+#equipo .abogados-fila {
+  display: flex;
+  justify-content: space-between; /* dos abogados en extremos */
+  gap: 2em;                       /* espacio entre abogados */
+}
+
+/* Abogado individual */
+#equipo .abogado {
+  display: flex;
+  align-items: flex-start;
+  gap: 1em;
+  flex: 1;                        /* ocupa el mismo espacio cada abogado */
+}
+
+#equipo .abogado img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+#equipo .abogado .info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+#equipo .abogado .info .nombre {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #19314B;
+  margin: 0;
+}
+
+#equipo .abogado .info .titulo-abogado {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  color: #19314B;
+  margin: 0;
+}
+
+#equipo .abogado .info .descripcion {
+  font-family: Arial, sans-serif;
+  font-size: 0.95em;
+  line-height: 1.4;
+  color: #333;
+  margin: 0;
+}
+
+
+
+
+
+
 
