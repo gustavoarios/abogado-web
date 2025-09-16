@@ -737,7 +737,7 @@ button {
   font-family: 'Raleway', sans-serif;
   color: #333;
   padding-left: 0;
-  margin-top: 0.5em;
+  margin-top: -1em;
 }
 
 #contacto form {
@@ -747,7 +747,82 @@ button {
   padding-left: 0;
 }
 
+#contacto form textarea {
+  min-height: 200px; /* aumenta la altura */
+}
+
+#contacto form input,
+#contacto form textarea {
+  font-family: 'Raleway', sans-serif;
+}
+
 /* Responsive: Contacto en móvil/tablet */
+/*Responsive: Header*/
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em 0.5em;
+    height: auto;
+  }
+
+  header .logo {
+    margin-left: 0;
+    height: 45px;
+  }
+
+  nav {
+    position: static;
+    left: auto;
+    transform: none;
+    width: 100%;
+    margin-top: 0.5em;
+    text-align: left;
+  }
+
+  nav a {
+    font-size: 1em;
+    margin: 0 0.5em 0 0;
+    display: inline-block;
+  }
+
+  .whatsapp-btn {
+    position: static;
+    right: auto;
+    top: auto;
+    transform: none;
+    margin-top: 1em;
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.7em 0.3em;
+  }
+
+  header .logo {
+    height: 35px;
+  }
+
+  nav a {
+    font-size: 0.95em;
+    margin: 0 0.3em 0 0;
+  }
+
+  .whatsapp-btn {
+    font-size: 0.95em;
+    padding: 0.4em 0.7em;
+  }
+}
+
+
+
+/* Responsive: Contacto en tablet */
 @media (max-width: 900px) {
   #contacto {
     padding: 1em 0 1em 1em;
