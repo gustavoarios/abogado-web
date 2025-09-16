@@ -1,3 +1,28 @@
+/* responsive.css */
+/* Para pantallas pequeñas (celulares) */
+@media (max-width: 768px) {
+  .servicios-grid {
+    grid-template-columns: 1fr; /* una columna */
+    padding-left: 1em;          /* ajusta el padding */
+    max-width: 90%;             /* ancho relativo */
+  }
+
+  #servicios .descripcion {
+    padding-left: 0;            /* quita desplazamiento lateral */
+    font-size: 0.95em;          /* texto más pequeño */
+  }
+}
+
+/* Para tablets */
+@media (max-width: 1024px) {
+  .servicios-grid {
+    grid-template-columns: repeat(2, 1fr); /* dos columnas */
+    gap: 1em;
+    padding-left: 2em;
+  }
+}
+
+
 /* Estilos generales */
 body {
   font-family: Arial, sans-serif;
@@ -56,6 +81,9 @@ nav a:hover {
 section {
   padding: 2em;
   scroll-margin-top: 80px; /* igual a la altura del header fijo */
+  background: #fff;        /* obligatorio para que se vea la sombra */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* sombra suave debajo */
+  border-radius: 5px;      /* opcional, bordes redondeados */
 
 }
 
@@ -348,6 +376,266 @@ input, textarea, button {
   color: #333;
   margin: 0;
 }
+
+/* Servicios */
+
+#servicios {
+  padding: 2em;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  gap: 1.5em; /* espacio entre servicios */
+  margin-top: 1em;
+}
+
+.servicio {
+  background: #f5f5f5;
+  padding: 1em;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  height: 200px;     /* altura fija */
+
+}
+
+.servicio:hover {
+  transform: translateY(-5px);
+}
+
+/* Servicios */
+
+#servicios .contenido {
+  display: flex;
+  align-items: flex-start; /* alinea al inicio verticalmente */
+  gap: 2em;                /* espacio entre título y párrafo */
+}
+
+#servicios .titulo {
+  flex: 0 0 auto;        /* que el ancho se ajuste al contenido */
+  white-space: nowrap;   /* evita que el texto se rompa en varias líneas */
+  font-family: 'Raleway', sans-serif;
+  font-size: 2em;
+  color: #19314B;
+  margin: 0;
+}
+
+
+#servicios .textos {
+  flex: 1;                 /* ocupa todo el espacio restante */
+  display: flex;
+  flex-direction: column;  /* los párrafos se apilan verticalmente */
+  gap: 1em;                /* espacio entre párrafos */
+  font-size: 1.3em;
+}
+
+#servicios .descripcion {
+  margin: 0;
+  margin-bottom: 0.5em; /* espacio entre párrafos */
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.6;
+  color: #333;
+  padding-left: 4.8em; /* mueve todo el bloque de texto hacia la derecha */
+
+}
+
+/* Grid de servicios */
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5em;
+  max-width: 1500px;        /* igual que el ancho del párrafo */
+  margin: 0 auto;          /* centrado horizontal */
+  padding-left: 17em; /* mueve todo el bloque de texto hacia la derecha */ /*ESTO ES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+  margin-top: 1.5em;
+
+}
+
+/* Cada tarjeta */
+.servicio {
+  background: #D2D2D2;       /* color de fondo */
+  padding: 1.5em;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover efecto */
+.servicio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Título de cada tarjeta */
+.servicio h3 {
+  color: #19314B;       /* azul para títulos */
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+}
+
+/* Descripción de cada tarjeta */
+.servicio p {
+  color: #333;          /* gris oscuro para el texto */
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/*agregamos esto para que tengan la imagen*/
+/* Cada tarjeta con overlay de imagen */
+.servicio {
+  position: relative;   /* necesario para el overlay */
+  overflow: hidden;     /* evita que la imagen se salga */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente el contenido */
+  align-items: center;     /* centra horizontalmente */
+  border-radius: 8px;
+  padding: 1.5em;
+  background: #D2D2D2;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover efecto */
+.servicio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Pseudo-elemento ::before para la imagen de fondo */
+.servicio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;        /* transparencia para que se lea el texto */
+  z-index: 0;
+  border-radius: 8px;   /* coincide con las esquinas de la tarjeta */
+}
+
+/* Aseguramos que el contenido quede sobre la imagen */
+.servicio h3,
+.servicio p {
+  position: relative;
+  z-index: 1;
+}
+
+/* Imágenes de cada servicio */
+.servicio:nth-child(1)::before {
+  background-image: url('img/derecho-laboral.png');
+}
+
+.servicio:nth-child(2)::before {
+  background-image: url('img/sucesiones.png');
+}
+
+.servicio:nth-child(3)::before {
+  background-image: url('img/contratos.png');
+}
+
+.servicio:nth-child(4)::before {
+  background-image: url('img/asesoramiento-empresarial.png');
+}
+
+.servicio:nth-child(5)::before {
+  background-image: url('img/litigios-civiles.png');
+}
+
+.servicio:nth-child(6)::before {
+  background-image: url('img/derecho-familia.png');
+}
+
+/* Contacto */
+
+#contacto .contenido {
+  display: flex;
+  align-items: flex-start; /* alinea al inicio verticalmente */
+  gap: 2em;                /* espacio entre título y texto/formulario */
+}
+
+#contacto .titulo {
+  flex: 0 0 auto;        /* que el ancho se ajuste al contenido */
+  white-space: nowrap;   /* evita que el texto se rompa en varias líneas */
+  font-family: 'Raleway', sans-serif;
+  font-size: 2em;
+  color: #19314B;
+  margin: 0;
+}
+
+#contacto .textos {
+  flex: 1;                 /* ocupa todo el espacio restante */
+  display: flex;
+  flex-direction: column;  /* los párrafos se apilan verticalmente */
+  gap: 1em;                /* espacio entre párrafos */
+  font-size: 1.3em;
+}
+
+#contacto .descripcion {
+  margin: 0;
+  margin-bottom: 0.5em; /* espacio entre párrafos */
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.6;
+  color: #333;
+  padding-left: 4.8em; /* mueve todo el bloque de texto hacia la derecha */ /*ESTO ES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+}
+
+/* Datos de contacto a la izquierda */
+#contacto .datos-contacto {
+  margin-top: 1em;
+  font-size: 0.95em;
+  color: #333;
+}
+
+/* Formulario a la derecha */
+#contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+#contacto form input,
+#contacto form textarea {
+  width: 100%;
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.95em;
+}
+
+#contacto form button {
+  background-color: #19314B;
+  color: #fff;
+  padding: 0.8em 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contacto form button:hover {
+  background-color: #0f1f36;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #contacto .contenido {
+    flex-direction: column;
+  }
+}
+
+
 
 
 
