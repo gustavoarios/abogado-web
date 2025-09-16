@@ -128,10 +128,47 @@ nav a:hover {
     right: 10px;
     padding: 0.4em 0.7em;
     font-size: 0.95em;
+    position: static;
+    margin-top: 1em;
+    width: auto;
+    justify-content: center;
+
   }
 
   .whatsapp-btn .whatsapp-text {
     display: none;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center; /* centra horizontalmente */
+    justify-content: center; /* centra verticalmente */
+    padding: 2em 1em; /* aumenta la altura del header */
+    height: auto; /* que se ajuste al contenido */
+  }
+
+  header .logo {
+    height: 60px; /* aumenta tamaño del logo en móvil */
+    margin: 0 auto 1em auto; /* espacio debajo del logo */
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* que los links bajen de línea si no entran */
+    justify-content: center;
+    gap: 0.5em; /* espacio entre links */
+    margin-top: 0.5em;
+  }
+
+  nav a {
+    font-size: 1em; /* tamaño legible en móvil */
+    margin: 0.3em; /* separación entre links */
+  }
+
+  /* Ajuste de scroll para el header fijo en móvil */
+  section {
+    scroll-margin-top: 140px; /* suficiente margen para no tapar contenido */
   }
 }
 
@@ -824,7 +861,7 @@ button {
   header {
     flex-direction: column;
     align-items: flex-start;
-    padding: 0.7em 0.3em;
+    /*padding: 0.7em 0.3em;*/
   }
 
   header .logo {
