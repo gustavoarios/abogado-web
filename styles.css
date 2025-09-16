@@ -957,18 +957,45 @@ footer {
 }
 
 @media (max-width: 900px) {
-  #equipo .contenido-equipo {
-    max-width: 100%;
-    padding: 0 1em;
+  #equipo {
+    padding: 1em 0 1em 1em; /* menos padding en móvil */
+  }
+
+  #equipo .contenido {
+    flex-direction: column;
     gap: 1em;
+    padding: 0 1em;
+  }
+
+  #equipo .titulo {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    white-space: normal;
   }
 
   #equipo .textos {
     font-size: 1em;
+    gap: 0.7em;
   }
 
-  #equipo .descripcion-equipo {
+  #equipo .descripcion {
+    font-size: 1em;
+    margin-bottom: 0.5em;
     max-width: 100%;
+  }
+
+  #equipo .socio-fundador {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+    margin-top: 1em;
+    gap: 1em;
+  }
+
+  #equipo .socio-fundador img {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 1em;
   }
 
   #equipo .abogados {
@@ -984,6 +1011,6 @@ footer {
 
   #equipo .abogado img {
     width: 100%;
-    max-width: 300px;
+    max-width: 200px;
   }
 }
