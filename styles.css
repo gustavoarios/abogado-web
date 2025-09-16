@@ -838,6 +838,12 @@ button {
   }
 }
 
+@media (max-width: 900px) {
+  .whatsapp-btn {
+    display: none !important;
+  }
+}
+
 
 
 /* Responsive: Contacto en tablet */
@@ -874,6 +880,7 @@ button {
 }
 
 /* Responsive: Contacto en celular */
+
 @media (max-width: 768px) {
   #contacto {
     padding: 1em 0 1em 1em;
