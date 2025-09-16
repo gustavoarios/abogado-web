@@ -238,6 +238,8 @@ button {
   /* alinea al inicio verticalmente */
   gap: 2em;
   /* espacio entre título y párrafo */
+  flex-direction: column; /* <-- Cambia esto para apilar verticalmente */
+
 }
 
 #sobre-nosotros .titulo {
