@@ -279,7 +279,8 @@ button {
 
 /* Nuestro Equipo */
 #equipo {
-  padding: 2em 0 2em 2em; /* igual que sobre-nosotros: padding-left: 2em */
+  padding: 2em 0 2em 2em;
+  /* igual que sobre-nosotros: padding-left: 2em */
   background-color: #D2D2D2;
 }
 
@@ -302,6 +303,7 @@ button {
   color: #19314B;
   margin: 0;
 }
+
 #equipo .textos {
   flex: 1;
   display: flex;
@@ -309,6 +311,7 @@ button {
   gap: 1em;
   font-size: 1.3em;
 }
+
 #equipo .descripcion {
   margin: 0;
   margin-bottom: 0.5em;
@@ -328,7 +331,7 @@ button {
   /* espacio entre imagen y texto */
   margin-top: 1.5em;
   /* separa del párrafo superior */
-  
+
   /* corre el bloque ligeramente a la derecha */
 }
 
@@ -550,7 +553,8 @@ button {
 /* Grid de servicios */
 .servicios-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  grid-template-columns: repeat(2, 1fr);
+  /* 2 columnas */
   gap: 1.5em;
   max-width: 1000px;
   margin: 0 auto;
@@ -673,8 +677,10 @@ button {
 
 #contacto {
   background-color: #D2D2D2;
-  padding: 2em 0 2em 2em; /* igual que otras secciones */
-  text-align: left; /* alineación de textos */
+  padding: 2em 0 2em 2em;
+  /* igual que otras secciones */
+  text-align: left;
+  /* alineación de textos */
 }
 
 #contacto .contenido {
@@ -722,11 +728,13 @@ button {
 
 #contacto .contacto-lado-a-lado {
   display: flex;
-  justify-content: center;      /* centra horizontalmente */
+  justify-content: center;
+  /* centra horizontalmente */
   align-items: flex-start;
   gap: 2em;
   max-width: 700px;
-  margin: 2em auto 0 auto;      /* centra el bloque en la sección */
+  margin: 2em auto 0 auto;
+  /* centra el bloque en la sección */
   width: 100%;
   padding-left: 0;
 }
@@ -748,7 +756,8 @@ button {
 }
 
 #contacto form textarea {
-  min-height: 200px; /* aumenta la altura */
+  min-height: 200px;
+  /* aumenta la altura */
 }
 
 #contacto form input,
@@ -762,13 +771,13 @@ button {
   header {
     flex-direction: column;
     align-items: flex-start;
-    padding: 1em 0.5em;
+    padding: 0.5em 0.5em;
     height: auto;
   }
 
   header .logo {
     margin-left: 0;
-    height: 45px;
+    height: 40px;
   }
 
   nav {
@@ -796,6 +805,15 @@ button {
     width: 100%;
     justify-content: center;
   }
+
+  /* Compensa el header fijo en móvil */
+  section {
+    scroll-margin-top: 100px;
+    /* aumenta el margen superior */
+    padding-top: 3.5em;
+    /* agrega espacio arriba */
+  }
+
 }
 
 @media (max-width: 600px) {
@@ -931,7 +949,8 @@ footer {
 
 @media (max-width: 900px) {
   #equipo {
-    padding: 1em 0 1em 1em; /* menos padding en móvil */
+    padding: 1em 0 1em 1em;
+    /* menos padding en móvil */
   }
 
   #equipo .contenido {
