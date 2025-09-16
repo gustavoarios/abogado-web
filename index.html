@@ -21,7 +21,10 @@
     <img src="img/logo.png" alt="Logo Estudio Jurídico" class="logo">
     <!-- <h1>Estudio Jurídico Dr. Pérez</h1> -->
     <nav>
-      <a href="#">Inicio</a>
+      <a href="#!" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
+        Inicio
+      </a>
+
       <a href="#sobre-nosotros">Sobre nosotros</a>
       <a href="#equipo">Nuestro Equipo</a>
       <a href="#servicios">Servicios</a>
@@ -182,7 +185,8 @@
     <div class="servicios-grid">
       <div class="servicio">
         <h3>Derecho Laboral</h3>
-        <p>Asesoramos en contratos, despidos, conflictos laborales y cumplimiento de todas las normativas laborales vigentes</p>
+        <p>Asesoramos en contratos, despidos, conflictos laborales y cumplimiento de todas las normativas laborales
+          vigentes</p>
       </div>
 
       <div class="servicio">
@@ -192,7 +196,8 @@
 
       <div class="servicio">
         <h3>Contratos y Acuerdos</h3>
-        <p>Redacción, revisión y negociación de contratos civiles y comerciales con un enfoque completamente preventivo</p>
+        <p>Redacción, revisión y negociación de contratos civiles y comerciales con un enfoque completamente preventivo
+        </p>
       </div>
 
       <div class="servicio">
@@ -202,7 +207,8 @@
 
       <div class="servicio">
         <h3>Litigios Civiles</h3>
-        <p>Representamos a nuestros clientes en juicios civiles, reclamaciones por daños y conflictos contractuales diversos</p>
+        <p>Representamos a nuestros clientes en juicios civiles, reclamaciones por daños y conflictos contractuales
+          diversos</p>
       </div>
 
       <div class="servicio">
@@ -214,28 +220,28 @@
   <!-- 👈 cierre de sección servicios -->
 
   <section id="contacto">
-  <div class="contenido">
-    <h2 class="titulo">Contacto</h2>
-    <div class="textos">
-      <p class="descripcion">
-        Haga su consulta. <br>
-        Le responderemos enseguida. <br>
-        Tenemos un equipo de especialistas preparados para asesorarlo.
-      </p>
-      <div class="datos-contacto">
-        <p><strong>Teléfono:</strong> +54 11 1234-5678</p>
-        <p><strong>Email:</strong> contacto@estudiojuridico.com</p>
-        <p><strong>Dirección:</strong> Av. Corrientes 1234, CABA, Argentina</p>
+    <div class="contenido">
+      <h2 class="titulo">Contacto</h2>
+      <div class="textos">
+        <p class="descripcion">
+          Haga su consulta. <br>
+          Le responderemos enseguida. <br>
+          Tenemos un equipo de especialistas preparados para asesorarlo.
+        </p>
+        <div class="datos-contacto">
+          <p><strong>Teléfono:</strong> +54 11 1234-5678</p>
+          <p><strong>Email:</strong> contacto@estudiojuridico.com</p>
+          <p><strong>Dirección:</strong> Av. Corrientes 1234, CABA, Argentina</p>
+        </div>
+        <form id="form-contacto">
+          <input type="text" placeholder="Tu nombre" required>
+          <input type="email" placeholder="Tu email" required>
+          <textarea placeholder="Tu consulta" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
       </div>
-      <form id="form-contacto">
-        <input type="text" placeholder="Tu nombre" required>
-        <input type="email" placeholder="Tu email" required>
-        <textarea placeholder="Tu consulta" required></textarea>
-        <button type="submit">Enviar</button>
-      </form>
     </div>
-  </div>
-</section>
+  </section>
   <!-- 👈 cierre de sección contacto -->
 
 

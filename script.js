@@ -1,9 +1,10 @@
+// Formulario
 document.getElementById("form-contacto").addEventListener("submit", function(e) {
   e.preventDefault();
   alert("¡Tu consulta fue enviada! (acá iría la integración con EmailJS)");
 });
 
-<script>
+// Scroll suave para el nav
 const links = document.querySelectorAll('nav a');
 
 links.forEach(link => {
@@ -15,4 +16,3 @@ links.forEach(link => {
     }
   });
 });
-</script>
