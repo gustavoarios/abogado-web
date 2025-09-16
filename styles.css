@@ -673,222 +673,151 @@ button {
 
 #contacto {
   background-color: #D2D2D2;
-  /* gris */
-  padding: 2em 1em 3em 1em;
-  /* padding-top más pequeño para acercar el bloque al título */
-  text-align: center;
-  /* centramos todos los textos */
-
+  padding: 2em 0 2em 2em; /* igual que otras secciones */
+  text-align: left; /* alineación de textos */
 }
 
 #contacto .contenido {
   display: flex;
-  align-items: flex-start;
-  /* alinea al inicio verticalmente */
-  gap: 2em;
-  /* espacio entre título y párrafo */
   flex-direction: column;
-  /* apila verticalmente: titulo > textos > contacto-lado-a-lado */
-
-
+  gap: 2em;
+  align-items: flex-start;
 }
 
 #contacto .titulo {
-  flex: 0 0 auto;
-  /* que el ancho se ajuste al contenido */
-  white-space: nowrap;
-  /* evita que el texto se rompa en varias líneas */
   font-family: 'Raleway', sans-serif;
   font-size: 2em;
   color: #19314B;
-  margin: 0;
+  margin: 0 0 0.7em 0;
+  white-space: nowrap;
+  text-align: left;
 }
 
 #contacto .textos {
-  flex: 1;
-  /* ocupa todo el espacio restante */
+  width: 100%;
   display: flex;
   flex-direction: column;
-  /* los párrafos se apilan verticalmente */
   gap: 1em;
-  /* espacio entre párrafos */
   font-size: 1.3em;
+  align-items: flex-start;
   margin: 0;
-  /* quitar márgenes por defecto */
-  margin-top: -3em;
-  /* separa un poquito del titulo, ajustable */
-  align-items: center;
-  /* centrado horizontal */
-  padding-left: 17em;
-  /* mueve todo el bloque de texto hacia la derecha */
-  /*ESTO ES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-
-
-
-}
-
-#contacto .descripcion {
-  margin: 0;
-  margin-bottom: 0.5em;
-  /* espacio entre párrafos */
-  font-family: Arial, sans-serif;
-  font-size: 1em;
-  line-height: 1.6;
-  color: #333;
-  padding-left: 4.8em;
-  /* mueve todo el bloque de texto hacia la derecha */
-  /*ESTO ES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+  padding-left: 0;
 }
 
 #contacto .descripcion-principal {
-  flex: 0 0 auto;
-  /* que el ancho se ajuste al contenido */
-  white-space: nowrap;
-  /* evita que el texto se rompa en varias líneas */
   font-family: 'Raleway', sans-serif;
   font-size: 1.5em;
   color: #19314B;
   margin: 0;
+  white-space: normal;
 }
 
 #contacto .descripcion-secundaria {
-  flex: 0 0 auto;
-  /* que el ancho se ajuste al contenido */
-  white-space: nowrap;
-  /* evita que el texto se rompa en varias líneas */
   font-family: 'Raleway', sans-serif;
   font-size: 1em;
   color: #333;
   margin: 0;
+  white-space: normal;
 }
 
-/* Datos de contacto a la izquierda */
-#contacto .datos-contacto {
-  margin-top: 1em;
-  font-size: 0.95em;
-  color: #333;
-}
-
-/* Formulario a la derecha */
-#contacto form {
+#contacto .contacto-lado-a-lado {
   display: flex;
-  flex-direction: column;
-  gap: 1em;
-  margin-top: 1em;
-}
-
-#contacto form input,
-#contacto form textarea {
+  justify-content: center;      /* centra horizontalmente */
+  align-items: flex-start;
+  gap: 2em;
+  max-width: 700px;
+  margin: 2em auto 0 auto;      /* centra el bloque en la sección */
   width: 100%;
-  padding: 0.8em;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 0.95em;
+  padding-left: 0;
 }
 
-#contacto form button {
-  background-color: #19314B;
-  color: #fff;
-  padding: 0.8em 1.2em;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+#contacto .datos-contacto {
+  flex: 1;
+  font-size: 1.1em;
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+  padding-left: 0;
+  margin-top: 0.5em;
 }
 
-#contacto form button:hover {
-  background-color: #0f1f36;
+#contacto form {
+  flex: 1;
+  max-width: 300px;
+  margin-left: 0;
+  padding-left: 0;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* Responsive: Contacto en móvil/tablet */
+@media (max-width: 900px) {
+  #contacto {
+    padding: 1em 0 1em 1em;
+  }
+
   #contacto .contenido {
+    gap: 1em;
+    padding: 0 1em;
+  }
+
+  #contacto .contacto-lado-a-lado {
     flex-direction: column;
+    gap: 1.5em;
+    max-width: 100%;
+    margin: 1em 0 0 0;
+    padding-left: 0;
+  }
+
+  #contacto .datos-contacto {
+    font-size: 1em;
+    padding-left: 0;
+    margin-top: 0;
+  }
+
+  #contacto form {
+    max-width: 100%;
+    min-width: 0;
+    padding-left: 0;
+    margin-top: 0;
   }
 }
 
-/* Contenedor datos + formulario lado a lado */
-#contacto .contacto-lado-a-lado {
-  display: flex;
-  justify-content: space-between;
-  gap: 2em;
-  margin-top: 2em;
-  /* separación del bloque de textos */
-  padding-left: 17em;
-  /* mueve todo el bloque de texto hacia la derecha */
-  /*ESTO ES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/* Responsive: Contacto en celular */
+@media (max-width: 768px) {
+  #contacto {
+    padding: 1em 0 1em 1em;
+  }
 
-}
+  #contacto .contenido {
+    gap: 1em;
+    padding: 0 1em;
+  }
 
-/* Datos a la izquierda */
-#contacto .datos-contacto {
-  flex: 3;
-  font-size: 1.3em;
-  font-family: 'Raleway', sans-serif;
-  color: #333;
-  padding-left: 3em;
-  /* mueve todo el bloque de texto hacia la derecha */
-  /*ESTO ES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+  #contacto .contacto-lado-a-lado {
+    flex-direction: column;
+    gap: 1em;
+    max-width: 100%;
+    margin: 1em 0 0 0;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
 
-}
+  #contacto .datos-contacto {
+    padding-left: 0 !important;
+    font-size: 1em;
+  }
 
-/* Formulario a la derecha */
-#contacto form {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  padding-left: 2.5em;
-  /* mueve todo el bloque de texto hacia la derecha */
-  /*ESTO ES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-  min-height: 500px;
-  /* ajustá la altura deseada */
+  #contacto form {
+    padding-left: 0 !important;
+    min-height: auto;
+    max-width: 100vw;
+    margin-top: 0;
+  }
 
-}
-
-#contacto form input {
-  width: 300%;
-  padding: 0.8em;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 0.95em;
-  font-family: 'Raleway', Arial, sans-serif;
-
-}
-
-#contacto form textarea {
-
-  min-height: 200px;
-  /* ajustá según quieras */
-  padding: 1em;
-  font-size: 0.95em;
-  /* mismo tamaño que antes */
-  width: 300%;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-family: 'Raleway', Arial, sans-serif;
-
-
-
-}
-
-#contacto form input::placeholder,
-#contacto form textarea::placeholder {
-  font-family: 'Raleway', Arial, sans-serif;
-  font-size: 1em;
-  color: #595959;
-}
-
-#contacto form button {
-  background-color: #19314B;
-  color: #fff;
-  padding: 0.8em 1.2em;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#contacto form button:hover {
-  background-color: #0f1f36;
+  #contacto form input,
+  #contacto form textarea {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+  }
 }
 
 /*Footer*/
@@ -904,33 +833,7 @@ footer {
   margin-top: 0em;
 }
 
-@media (max-width: 768px) {
 
-  #contacto .contacto-lado-a-lado,
-  #contacto .textos,
-  .servicios-grid {
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-    max-width: 100% !important;
-  }
-
-  #contacto .datos-contacto {
-    padding-left: 0 !important;
-  }
-
-  #contacto form {
-    padding-left: 0 !important;
-    min-height: auto;
-    max-width: 100vw;
-  }
-
-  #contacto form input,
-  #contacto form textarea {
-    width: 100% !important;
-    min-width: 0 !important;
-    box-sizing: border-box;
-  }
-}
 
 @media (max-width: 900px) {
   #sobre-nosotros .contenido {
