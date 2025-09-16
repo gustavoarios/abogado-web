@@ -915,16 +915,28 @@ footer {
 }
 
 @media (max-width: 768px) {
-  footer {
-    font-size: 0.95em;
-    padding: 1em 0.5em;
+  #contacto .contacto-lado-a-lado,
+  #contacto .textos,
+  .servicios-grid {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    max-width: 100% !important;
   }
-}
 
-/* Responsive */
-@media (max-width: 768px) {
-  #contacto .contacto-lado-a-lado {
-    flex-direction: column;
-    /* se apilan en móvil */
+  #contacto .datos-contacto {
+    padding-left: 0 !important;
+  }
+
+  #contacto form {
+    padding-left: 0 !important;
+    min-height: auto;
+    max-width: 100vw;
+  }
+
+  #contacto form input,
+  #contacto form textarea {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
   }
 }
