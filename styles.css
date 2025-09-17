@@ -17,6 +17,30 @@ body {
 
 }
 
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  display: none;
+  padding: 0;
+}
+
+.scroll-to-top .flecha-img {
+  width: 40px; /* ajustá el tamaño según tu imagen */
+  height: auto;
+  opacity: 0.7;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.scroll-to-top:hover .flecha-img {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
 /* para que el scroll sea suave */
 html {
   scroll-behavior: smooth;
