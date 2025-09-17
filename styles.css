@@ -1019,25 +1019,34 @@ footer {
   header .logo {
     height: 40px;
     /* aumenta tamaño del logo en móvil */
-    margin: 0 auto 5.5em auto;
-    /* espacio debajo del logo - ACA ALEJAMOS LA PARTE INFERIOR DEL LOGO DE LAS LETRAS */
-  }
 
+    /* espacio debajo del logo - ACA ALEJAMOS LA PARTE INFERIOR DEL LOGO DE LAS LETRAS */
+
+    margin-bottom: 5em;
+    /* más razonable que 7em */
+
+  }
 
   nav {
     width: 100%;
     display: flex;
-    flex-wrap: wrap; /* que los links bajen de línea si no entran */
+    flex-wrap: wrap;
+    /* que los links bajen de línea si no entran */
     justify-content: center;
-    gap: 0.5em; /* espacio entre links - ACA REDUCIMOS EL ESPACIO ENTRE RENGLONES ESTABA EN 0.5, LO CAMBIAMOS A 0.2*/
-    margin-top: 0.5em;
+    gap: 0.6em;
+    /* espacio entre links - ACA REDUCIMOS EL ESPACIO ENTRE RENGLONES ESTABA EN 0.5, LO CAMBIAMOS A 0.2*/
+    margin-top: 3em;
 
-    align-items: center; /* centrado horizontal */
+    align-items: center;
+    /* centrado horizontal */
+
   }
 
   nav a {
-    font-size: 1em; /* tamaño legible en móvil */
-    margin: 0.3em; /* separación entre links */
+    font-size: 1em;
+    /* tamaño legible en móvil */
+    margin: 0em;
+    /* separación entre links */
 
     text-align: center;
   }
