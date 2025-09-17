@@ -1007,7 +1007,7 @@ footer {
   }
 
   header .logo {
-    height: 60px; /* aumenta tamaño del logo en móvil */
+    height: 30px; /* aumenta tamaño del logo en móvil */
     margin: 0 auto 1em auto; /* espacio debajo del logo */
   }
 
