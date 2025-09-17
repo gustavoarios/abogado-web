@@ -1,22 +1,4 @@
-/* responsive.css */
-/* Para pantallas pequeñas (celulares) */
-@media (max-width: 768px) {
-  .servicios-grid {
-    grid-template-columns: 1fr;
-    /* una columna */
-    padding-left: 1em;
-    /* ajusta el padding */
-    max-width: 90%;
-    /* ancho relativo */
-  }
 
-  #servicios .descripcion {
-    padding-left: 0;
-    /* quita desplazamiento lateral */
-    font-size: 0.95em;
-    /* texto más pequeño */
-  }
-}
 
 /* Para tablets */
 @media (max-width: 1024px) {
@@ -123,54 +105,7 @@ nav a:hover {
   display: inline-block;
 }
 
-@media (max-width: 768px) {
-  .whatsapp-btn {
-    right: 10px;
-    padding: 0.4em 0.7em;
-    font-size: 0.95em;
-    position: static;
-    margin-top: 1em;
-    width: auto;
-    justify-content: center;
 
-  }
-
-  .whatsapp-btn .whatsapp-text {
-    display: none;
-  }
-
-  header {
-    flex-direction: column;
-    align-items: center; /* centra horizontalmente */
-    justify-content: center; /* centra verticalmente */
-    padding: 2em 1em; /* aumenta la altura del header */
-    height: auto; /* que se ajuste al contenido */
-  }
-
-  header .logo {
-    height: 60px; /* aumenta tamaño del logo en móvil */
-    margin: 0 auto 1em auto; /* espacio debajo del logo */
-  }
-
-  nav {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap; /* que los links bajen de línea si no entran */
-    justify-content: center;
-    gap: 0.5em; /* espacio entre links */
-    margin-top: 0.5em;
-  }
-
-  nav a {
-    font-size: 1em; /* tamaño legible en móvil */
-    margin: 0.3em; /* separación entre links */
-  }
-
-  /* Ajuste de scroll para el header fijo en móvil */
-  section {
-    scroll-margin-top: 140px; /* suficiente margen para no tapar contenido */
-  }
-}
 
 
 /* Secciones */
@@ -934,46 +869,7 @@ button {
   }
 }
 
-/* Responsive: Contacto en celular */
 
-@media (max-width: 768px) {
-  #contacto {
-    padding: 1em 0 1em 1em;
-  }
-
-  #contacto .contenido {
-    gap: 1em;
-    padding: 0 1em;
-  }
-
-  #contacto .contacto-lado-a-lado {
-    flex-direction: column;
-    gap: 1em;
-    max-width: 100%;
-    margin: 1em 0 0 0;
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-  }
-
-  #contacto .datos-contacto {
-    padding-left: 0 !important;
-    font-size: 1em;
-  }
-
-  #contacto form {
-    padding-left: 0 !important;
-    min-height: auto;
-    max-width: 100vw;
-    margin-top: 0;
-  }
-
-  #contacto form input,
-  #contacto form textarea {
-    width: 100% !important;
-    min-width: 0 !important;
-    box-sizing: border-box;
-  }
-}
 
 /*Footer*/
 footer {
@@ -1069,11 +965,106 @@ footer {
   }
 }
 
-/* Responsive: 1 columna en celular */
+/* ============================
+   Estilos Responsive para Móviles
+   ============================ */
 @media (max-width: 768px) {
+
+  /* === Sección: Servicios === */
   .servicios-grid {
-    grid-template-columns: 1fr;
-    padding-left: 0;
-    max-width: 98vw;
+    grid-template-columns: 1fr; /* una sola columna */
+    padding-left: 0; /* sin desplazamiento lateral */
+    max-width: 98vw; /* ancho casi completo del viewport */
+  }
+
+  #servicios .descripcion {
+    padding-left: 0; /* quita desplazamiento lateral */
+    font-size: 0.95em; /* texto más pequeño */
+  }
+
+  /* === Sección: Botón de WhatsApp === */
+  .whatsapp-btn {
+    right: 10px;
+    padding: 0.4em 0.7em;
+    font-size: 0.95em;
+    position: static;
+    margin-top: 1em;
+    width: auto;
+    justify-content: center;
+  }
+
+  .whatsapp-btn .whatsapp-text {
+    display: none; /* oculta el texto en móvil */
+  }
+
+  /* === Sección: Header y Navegación === */
+  header {
+    flex-direction: column;
+    align-items: center; /* centra horizontalmente */
+    justify-content: center; /* centra verticalmente */
+    padding: 2em 1em; /* aumenta la altura del header */
+    height: auto; /* que se ajuste al contenido */
+  }
+
+  header .logo {
+    height: 60px; /* aumenta tamaño del logo en móvil */
+    margin: 0 auto 1em auto; /* espacio debajo del logo */
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* que los links bajen de línea si no entran */
+    justify-content: center;
+    gap: 0.5em; /* espacio entre links */
+    margin-top: 0.5em;
+  }
+
+  nav a {
+    font-size: 1em; /* tamaño legible en móvil */
+    margin: 0.3em; /* separación entre links */
+  }
+
+  /* Ajuste de scroll para el header fijo en móvil */
+  section {
+    scroll-margin-top: 140px; /* suficiente margen para no tapar contenido */
+  }
+
+  /* === Sección: Contacto === */
+  #contacto {
+    padding: 1em 0 1em 1em;
+  }
+
+  #contacto .contenido {
+    gap: 1em;
+    padding: 0 1em;
+  }
+
+  #contacto .contacto-lado-a-lado {
+    flex-direction: column;
+    gap: 1em;
+    max-width: 100%;
+    margin: 1em 0 0 0;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  #contacto .datos-contacto {
+    padding-left: 0 !important;
+    font-size: 1em;
+  }
+
+  #contacto form {
+    padding-left: 0 !important;
+    min-height: auto;
+    max-width: 100vw;
+    margin-top: 0;
+  }
+
+  #contacto form input,
+  #contacto form textarea {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
   }
 }
