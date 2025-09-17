@@ -1025,22 +1025,20 @@ footer {
 
 
   nav {
-    display: flex;
-    flex-direction: column;
-    /* enlaces uno debajo del otro */
-    align-items: center;
-    /* centrado horizontal */
     width: 100%;
-    gap: 0.5em;
+    display: flex;
+    flex-wrap: wrap; /* que los links bajen de línea si no entran */
+    justify-content: center;
+    gap: 0.5em; /* espacio entre links */
     margin-top: 0.5em;
+
+    align-items: center; /* centrado horizontal */
   }
 
-
-
   nav a {
-    font-size: 1em;
-    margin: 0.3em 0;
-    /* espacio vertical entre enlaces */
+    font-size: 1em; /* tamaño legible en móvil */
+    margin: 0.3em; /* separación entre links */
+    
     text-align: center;
   }
 
