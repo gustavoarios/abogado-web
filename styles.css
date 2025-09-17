@@ -1019,7 +1019,7 @@ footer {
   header .logo {
     height: 40px;
     /* aumenta tamaño del logo en móvil */
-    margin: 0 auto 3em auto;
+    margin: 0 auto 5em auto;
     /* espacio debajo del logo - ACA ALEJAMOS LA PARTE INFERIOR DEL LOGO DE LAS LETRAS */
   }
 
@@ -1029,7 +1029,7 @@ footer {
     display: flex;
     flex-wrap: wrap; /* que los links bajen de línea si no entran */
     justify-content: center;
-    gap: 0.2em; /* espacio entre links - ACA REDUCIMOS EL ESPACIO ENTRE RENGLONES ESTABA EN 0.5, LO CAMBIAMOS A 0.2*/
+    gap: 0.5em; /* espacio entre links - ACA REDUCIMOS EL ESPACIO ENTRE RENGLONES ESTABA EN 0.5, LO CAMBIAMOS A 0.2*/
     margin-top: 0.5em;
 
     align-items: center; /* centrado horizontal */
