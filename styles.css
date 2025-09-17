@@ -1030,7 +1030,7 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 0em 2.5em 2em 0em;
-    gap: 0.5em;
+    gap: 1em;
     row-gap: 0.1em;
     /* espacio entre enlaces */
     width: 100%;
@@ -1039,7 +1039,7 @@ footer {
 
     max-width: 300px;
     /* ajustá según el diseño */
-    
+    /* margin: 0 auto; */
 
   }
 
