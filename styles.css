@@ -1019,7 +1019,7 @@ footer {
   header .logo {
     height: 40px;
     /* aumenta tamaño del logo en móvil */
-    margin: 0 auto 5em auto;
+    margin: 0 auto 5.5em auto;
     /* espacio debajo del logo - ACA ALEJAMOS LA PARTE INFERIOR DEL LOGO DE LAS LETRAS */
   }
 
