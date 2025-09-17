@@ -1019,7 +1019,7 @@ footer {
   header .logo {
     height: 40px;
     /* aumenta tamaño del logo en móvil */
-    margin: 0 auto 1em auto;
+    margin: 0 auto 2em auto;
     /* espacio debajo del logo */
   }
 
@@ -1038,7 +1038,7 @@ footer {
   nav a {
     font-size: 1em; /* tamaño legible en móvil */
     margin: 0.3em; /* separación entre links */
-    
+
     text-align: center;
   }
 
